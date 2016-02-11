@@ -1,0 +1,22 @@
+                                              >URL = domain + endpoint + schoolID + path<
+http://odin.prod.cheggnet.com:6033/odin-external/rest/v1/school-major-match/00051799-5a99-4d82-a7c1-180bb987ced6/matchSchoolMajors
+
+                                                                 >BODY<
+    {
+    "majorIds": 
+    [
+          "f9666f64-0f46-462a-8150-877af842590b",
+    ]
+    }
+
+                                                                >METHOD<
+                                                                  POST
+                       
+                                                  >CURL = URL + HEADERS + BODY + METHOD<
+curl 'http://odin.prod.cheggnet.com:6033/odin-external/rest/v1/school-major-match/00051799-5a99-4d82-a7c1-180bb987ced6/matchSchoolMajors' -d '{"majorIds": ["9d556d90-4819-4b33-a265-6c2076bb28aa"]}' -H "Content-Type: application/json" -X POST -v
+
+                                                                >RUNNER<
+                                                             ?Where to run?
+                                                         runtests tests/match.py
+                                                         nosetests tests/match.py
+
